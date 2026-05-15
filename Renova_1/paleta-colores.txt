@@ -1,0 +1,45 @@
+# Paleta de Colores Renova
+
+Basada en el logo de Renova: centro amarillo-naranja, hojas verdes, pétalos azules (cyan a navy)
+
+## Colores Principales (Headers, Botones, CTAs)
+
+| Nombre | Hex | Uso |
+|--------|-----|-----|
+| Navy Blue | #1A2F45 | Encabezados, textos, fondo hero |
+| Cyan | #00B4EB | Botones primarios, links, CTAs |
+| Cyan Dark | #0090c4 | Hover states |
+
+## Colores Secundarios (Acentos, Iconos, Separadores)
+
+| Nombre | Hex | Uso |
+|--------|-----|-----|
+| Green | #71C238 | Iconos de servicios, badges |
+| Green Dark | #5A9E2D | Hover iconos verdes |
+| Solar Yellow | #F7931E | Acentos, precios, separadores |
+
+## Fondos y Textos
+
+| Nombre | Hex | Uso |
+|--------|-----|-----|
+| White | #FFFFFF | Fondo principal |
+| Light Gray | #F5F5F5 / #F8F9FA | Fondos alternativos |
+| Text Body | #666666 | Texto de párrafos |
+| Text Muted | #999999 | Labels secundarios |
+
+## Sistema de Tokens CSS
+
+```css
+:root {
+  --blue-navy: #1A2F45;    /* Headings, títulos */
+  --blue-cyan: #00B4EB;     /* Botones, CTAs, links */
+  --blue-dark: #0090c4;     /* Hover states */
+  --green: #71C238;         /* Iconos servicios */
+  --green-dark: #5A9E2D;    /* Hover iconos */
+  --solar-yellow: #F7931E;  /* Acentos, precios */
+
+  --white: #FFFFFF;
+  --gray-light: #F5F5F5;
+  --text-body: #666666;
+}
+```
