@@ -1,3 +1,7 @@
+/* ═══════════════════════════════════════════════
+   RENOVA — styles.css (Mobile-optimised)
+   ═══════════════════════════════════════════════ */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -5,20 +9,16 @@
   align-items: center;
 }
 
-.benefits {
-  position: relative;
-}
+.benefits  { position: relative; }
+.process   { position: relative; }
+.guarantees { position: relative; }
+.footer    { position: relative; }
 
-.process {
-  position: relative;
-}
-
-.guarantees {
-  position: relative;
-}
-
-.footer {
-  position: relative;
+/* ─── Hero CTA mobile stack ─── */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 @media (max-width: 576px) {
@@ -31,5 +31,66 @@
   .hero-cta .btn-secondary {
     text-align: center;
     justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ─── Section padding tightened on small screens ─── */
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 16px !important;
+  }
+
+  .services-section,
+  .guarantees-section,
+  .contact-section,
+  .calculator-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .contact-info {
+    padding: 20px 14px !important;
+  }
+
+  .contact-form {
+    padding: 20px 14px !important;
+  }
+
+  .contact-item {
+    padding: 14px 12px;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  /* Hero stats row wraps nicely */
+  .hero-stats {
+    gap: 8px;
+  }
+
+  .stat-item {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 110px;
+  }
+
+  /* Guarantee cards full width */
+  .guarantee-card {
+    padding: 28px 20px;
+  }
+
+  /* Service cards full width */
+  .service-card {
+    padding: 28px 20px;
+  }
+
+  /* Footer tweaks */
+  .footer-logo span {
+    font-size: 1.4rem;
   }
 }
