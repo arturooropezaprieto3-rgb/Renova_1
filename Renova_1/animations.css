@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   RENOVA — Animations v2
+   RENOVA — Animations v2 (Mobile-optimised)
    ═══════════════════════════════════════════════ */
 
 /* ─── Base: elementos esperando animarse ─── */
@@ -11,6 +11,7 @@
   opacity: 0;
   transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1),
               transform 0.65s cubic-bezier(0.16,1,0.3,1);
+  /* Respect user's motion preference from the start */
 }
 
 .fade-in       { transform: translateY(28px); }
@@ -57,4 +58,35 @@
 }
 .pulse-glow {
   animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* ─── Reduce all motion for users who prefer it ─── */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-left,
+  .fade-in-right,
+  .slide-up,
+  .scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .bloom,
+  .card-float,
+  .pulse-glow {
+    animation: none !important;
+  }
+
+  .stagger-1, .stagger-2, .stagger-3,
+  .stagger-4, .stagger-5 {
+    transition-delay: 0s !important;
+  }
+}
+
+/* ─── On mobile, reduce translateX distances to avoid clipping ─── */
+@media (max-width: 576px) {
+  .fade-in-left  { transform: translateX(-20px); }
+  .fade-in-right { transform: translateX(20px); }
+  .slide-up      { transform: translateY(30px); }
 }
